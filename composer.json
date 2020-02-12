@@ -1,6 +1,6 @@
 {
-    "name": "firesphere/partialuserforms",
-    "description": "Store partial userform submissions",
+    "name": "intotheweb101/partialuserforms",
+    "description": "extension from firesphere/partialuserforms Store partial userform submissions",
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "keywords": [
