@@ -116,6 +116,10 @@ class PartialSubmissionController extends ContentController
             $this->savePartialFile($formData, $filter, $editableField);
         } elseif ($editableField instanceof EditableFormField) {
             $this->savePartialField($formData, $filter, $editableField);
+        }else{
+            $name = substr($formData['Name'], 0, strpos($formData['Name'], "__"));
+            $editableField = EditableFormField::get()->filter(['Name' => $name])->first();
+            $this->savePartialField($formData, $filter, $editableField);
         }
 
         // Return the ParentID to link the PartialSubmission to it's proper thingy
